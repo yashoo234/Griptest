@@ -5,7 +5,7 @@
 import InputWrapper from '@/components/InputWrapper';
 import PopoverLocationInfo from '@/components/dashboard/account/PopoverLocationInfo';
 import { Input } from '@/components/ui/input';
-import { SubmitButton } from './SubmitButton';
+import { SubmitButton } from '../../../components/SubmitButton';
 
 export default async function Account() {
   // This function is triggered when the user submits the form.
@@ -23,7 +23,7 @@ export default async function Account() {
   };
 
   return (
-    <div className='p-8 space-y-10'>
+    <div className='p-4 space-y-10'>
       <div className='space-y-1'>
         <p className='text-2xl font-medium'>Account Settings</p>
         <p className='text-secondary'>
