@@ -19,8 +19,13 @@ module.exports = {
       },
     },
     extend: {
+      boxShadow: {
+        custom: '0px -8px 0px 0px',
+      },
       backgroundImage: {
+        'text-gradient': 'linear-gradient(180deg, #303030 36.53%, #3C50E0 100%)',
         waves: "url('/waves-background.png')",
+        lp12: "url('/hero.svg')",
         'gradient-feat-lp4': 'linear-gradient(90deg, #000000 0%, #69FFF614 20%, #FF2BAA14 80%,#000000 100%)',
         'gradient-hero-lp4': 'linear-gradient(75deg, #000000 0%, #69FFF614 20%, #FF2BAA14 80%,#000000 100%)',
       },
