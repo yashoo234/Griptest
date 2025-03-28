@@ -11,7 +11,7 @@ export type Database = {
           filename: string;
           history_metadata: string | null;
           id: string;
-          user_id: string;
+          user_id: string | null;
         };
         Insert: {
           chat_history?: Json | null;
@@ -20,7 +20,7 @@ export type Database = {
           filename: string;
           history_metadata?: string | null;
           id?: string;
-          user_id: string;
+          user_id?: string | null;
         };
         Update: {
           chat_history?: Json | null;
@@ -29,11 +29,64 @@ export type Database = {
           filename?: string;
           history_metadata?: string | null;
           id?: string;
-          user_id?: string;
+          user_id?: string | null;
         };
         Relationships: [
           {
             foreignKeyName: 'chat_with_file_user_id_fkey';
+            columns: ['user_id'];
+            isOneToOne: false;
+            referencedRelation: 'users';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      chat_with_youtube: {
+        Row: {
+          chat_history: Json | null;
+          created_at: string;
+          history_metadata: string | null;
+          id: string;
+          ingestion_done: boolean | null;
+          style: string;
+          summary: string | null;
+          tone: string;
+          transcription: string;
+          url: string;
+          user_id: string | null;
+          video_title: string;
+        };
+        Insert: {
+          chat_history?: Json | null;
+          created_at?: string;
+          history_metadata?: string | null;
+          id?: string;
+          ingestion_done?: boolean | null;
+          style: string;
+          summary?: string | null;
+          tone: string;
+          transcription: string;
+          url: string;
+          user_id?: string | null;
+          video_title: string;
+        };
+        Update: {
+          chat_history?: Json | null;
+          created_at?: string;
+          history_metadata?: string | null;
+          id?: string;
+          ingestion_done?: boolean | null;
+          style?: string;
+          summary?: string | null;
+          tone?: string;
+          transcription?: string;
+          url?: string;
+          user_id?: string | null;
+          video_title?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'chat_with_youtube_user_id_fkey';
             columns: ['user_id'];
             isOneToOne: false;
             referencedRelation: 'users';
@@ -48,7 +101,7 @@ export type Database = {
           results: string | null;
           style: string;
           topic: string;
-          user_id: string;
+          user_id: string | null;
           voice: string | null;
           word_limit: string | null;
         };
@@ -58,7 +111,7 @@ export type Database = {
           results?: string | null;
           style: string;
           topic: string;
-          user_id: string;
+          user_id?: string | null;
           voice?: string | null;
           word_limit?: string | null;
         };
@@ -68,7 +121,7 @@ export type Database = {
           results?: string | null;
           style?: string;
           topic?: string;
-          user_id?: string;
+          user_id?: string | null;
           voice?: string | null;
           word_limit?: string | null;
         };
@@ -180,6 +233,47 @@ export type Database = {
           },
         ];
       };
+      image_enhancer_upscaler: {
+        Row: {
+          created_at: string;
+          error: string | null;
+          id: string;
+          input_image: string;
+          output_image: string | null;
+          prediction_id: string;
+          type: string;
+          user_id: string;
+        };
+        Insert: {
+          created_at?: string;
+          error?: string | null;
+          id?: string;
+          input_image: string;
+          output_image?: string | null;
+          prediction_id: string;
+          type: string;
+          user_id: string;
+        };
+        Update: {
+          created_at?: string;
+          error?: string | null;
+          id?: string;
+          input_image?: string;
+          output_image?: string | null;
+          prediction_id?: string;
+          type?: string;
+          user_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'image_enhancer_upscaler_user_id_fkey';
+            columns: ['user_id'];
+            isOneToOne: false;
+            referencedRelation: 'users';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
       image_generations: {
         Row: {
           created_at: string;
@@ -280,6 +374,38 @@ export type Database = {
           },
         ];
       };
+      llamagpt: {
+        Row: {
+          chat_history: Json | null;
+          created_at: string;
+          id: string;
+          title: string | null;
+          user_id: string | null;
+        };
+        Insert: {
+          chat_history?: Json | null;
+          created_at?: string;
+          id?: string;
+          title?: string | null;
+          user_id?: string | null;
+        };
+        Update: {
+          chat_history?: Json | null;
+          created_at?: string;
+          id?: string;
+          title?: string | null;
+          user_id?: string | null;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'llamagpt_user_id_fkey';
+            columns: ['user_id'];
+            isOneToOne: false;
+            referencedRelation: 'users';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
       multillm_chatgpt: {
         Row: {
           chat_history: Json | null;
@@ -287,7 +413,7 @@ export type Database = {
           id: string;
           model: string | null;
           title: string | null;
-          user_id: string;
+          user_id: string | null;
         };
         Insert: {
           chat_history?: Json | null;
@@ -295,7 +421,7 @@ export type Database = {
           id?: string;
           model?: string | null;
           title?: string | null;
-          user_id: string;
+          user_id?: string | null;
         };
         Update: {
           chat_history?: Json | null;
@@ -303,11 +429,58 @@ export type Database = {
           id?: string;
           model?: string | null;
           title?: string | null;
-          user_id?: string;
+          user_id?: string | null;
         };
         Relationships: [
           {
             foreignKeyName: 'multillm_chatgpt_user_id_fkey';
+            columns: ['user_id'];
+            isOneToOne: false;
+            referencedRelation: 'users';
+            referencedColumns: ['id'];
+          },
+        ];
+      };
+      music_generations: {
+        Row: {
+          created_at: string;
+          duration: number;
+          error: string | null;
+          genre: string;
+          id: string;
+          mood: string;
+          music_url: string | null;
+          prediction_id: string;
+          prompt: string;
+          user_id: string;
+        };
+        Insert: {
+          created_at?: string;
+          duration: number;
+          error?: string | null;
+          genre: string;
+          id?: string;
+          mood: string;
+          music_url?: string | null;
+          prediction_id: string;
+          prompt: string;
+          user_id: string;
+        };
+        Update: {
+          created_at?: string;
+          duration?: number;
+          error?: string | null;
+          genre?: string;
+          id?: string;
+          mood?: string;
+          music_url?: string | null;
+          prediction_id?: string;
+          prompt?: string;
+          user_id?: string;
+        };
+        Relationships: [
+          {
+            foreignKeyName: 'music_generations_user_id_fkey';
             columns: ['user_id'];
             isOneToOne: false;
             referencedRelation: 'users';
@@ -323,7 +496,7 @@ export type Database = {
           image_url: string | null;
           prompt: string;
           url: string;
-          user_id: string;
+          user_id: string | null;
         };
         Insert: {
           created_at?: string;
@@ -332,7 +505,7 @@ export type Database = {
           image_url?: string | null;
           prompt: string;
           url: string;
-          user_id: string;
+          user_id?: string | null;
         };
         Update: {
           created_at?: string;
@@ -341,7 +514,7 @@ export type Database = {
           image_url?: string | null;
           prompt?: string;
           url?: string;
-          user_id?: string;
+          user_id?: string | null;
         };
         Relationships: [
           {
@@ -407,37 +580,76 @@ export type Database = {
           },
         ];
       };
-      users: {
+      text_to_speech: {
         Row: {
-          avatar_url: string | null;
+          audio_url: string;
+          content: string;
           created_at: string;
-          email: string;
-          full_name: string | null;
           id: string;
+          model: string;
+          title: string;
+          user_id: string | null;
+          voice: string;
         };
         Insert: {
-          avatar_url?: string | null;
+          audio_url: string;
+          content: string;
           created_at?: string;
-          email: string;
-          full_name?: string | null;
-          id: string;
+          id?: string;
+          model: string;
+          title: string;
+          user_id?: string | null;
+          voice: string;
         };
         Update: {
-          avatar_url?: string | null;
+          audio_url?: string;
+          content?: string;
           created_at?: string;
-          email?: string;
-          full_name?: string | null;
           id?: string;
+          model?: string;
+          title?: string;
+          user_id?: string | null;
+          voice?: string;
         };
         Relationships: [
           {
-            foreignKeyName: 'users_id_fkey';
-            columns: ['id'];
-            isOneToOne: true;
+            foreignKeyName: 'text_to_speech_user_id_fkey';
+            columns: ['user_id'];
+            isOneToOne: false;
             referencedRelation: 'users';
             referencedColumns: ['id'];
           },
         ];
+      };
+      users: {
+        Row: {
+          avatar_url: string | null;
+          created_at: string;
+          credits: number;
+          email: string;
+          full_name: string | null;
+          id: string;
+          plan: Database['public']['Enums']['subscriptiontype'];
+        };
+        Insert: {
+          avatar_url?: string | null;
+          created_at?: string;
+          credits?: number;
+          email: string;
+          full_name?: string | null;
+          id: string;
+          plan?: Database['public']['Enums']['subscriptiontype'];
+        };
+        Update: {
+          avatar_url?: string | null;
+          created_at?: string;
+          credits?: number;
+          email?: string;
+          full_name?: string | null;
+          id?: string;
+          plan?: Database['public']['Enums']['subscriptiontype'];
+        };
+        Relationships: [];
       };
       voice_transcriptions: {
         Row: {
@@ -480,41 +692,49 @@ export type Database = {
           },
         ];
       };
-      youtube_summary_tool: {
+      youtube_content_generator: {
         Row: {
-          chat_history: Json | null;
           created_at: string;
+          generated_content: Json | null;
           id: string;
-          output_style: string;
+          language: string | null;
           summary: string | null;
-          tone: string;
-          transcription: string | null;
-          user_id: string;
-          video_link: string;
+          transcription: string;
+          url: string;
+          user_id: string | null;
+          youtube_title: string;
         };
         Insert: {
-          chat_history?: Json | null;
           created_at?: string;
+          generated_content?: Json | null;
           id?: string;
-          output_style: string;
+          language?: string | null;
           summary?: string | null;
-          tone: string;
-          transcription?: string | null;
-          user_id: string;
-          video_link: string;
+          transcription: string;
+          url: string;
+          user_id?: string | null;
+          youtube_title: string;
         };
         Update: {
-          chat_history?: Json | null;
           created_at?: string;
+          generated_content?: Json | null;
           id?: string;
-          output_style?: string;
+          language?: string | null;
           summary?: string | null;
-          tone?: string;
-          transcription?: string | null;
-          user_id?: string;
-          video_link?: string;
+          transcription?: string;
+          url?: string;
+          user_id?: string | null;
+          youtube_title?: string;
         };
-        Relationships: [];
+        Relationships: [
+          {
+            foreignKeyName: 'youtube_content_generator_user_id_fkey';
+            columns: ['user_id'];
+            isOneToOne: false;
+            referencedRelation: 'users';
+            referencedColumns: ['id'];
+          },
+        ];
       };
     };
     Views: {
@@ -606,4 +826,17 @@ export type Enums<
   ? Database[PublicEnumNameOrOptions['schema']]['Enums'][EnumName]
   : PublicEnumNameOrOptions extends keyof PublicSchema['Enums']
     ? PublicSchema['Enums'][PublicEnumNameOrOptions]
+    : never;
+
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends keyof PublicSchema['CompositeTypes'] | { schema: keyof Database },
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof Database;
+  }
+    ? keyof Database[PublicCompositeTypeNameOrOptions['schema']]['CompositeTypes']
+    : never = never,
+> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+  ? Database[PublicCompositeTypeNameOrOptions['schema']]['CompositeTypes'][CompositeTypeName]
+  : PublicCompositeTypeNameOrOptions extends keyof PublicSchema['CompositeTypes']
+    ? PublicSchema['CompositeTypes'][PublicCompositeTypeNameOrOptions]
     : never;
