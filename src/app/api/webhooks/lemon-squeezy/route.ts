@@ -8,6 +8,7 @@ import axios from 'axios';
 import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'crypto';
 import { headers } from 'next/headers';
+import { EnumSubscription } from '@/types/types';
 
 // Environment variables for Lemon Squeezy API key, base URL, and webhook secret.
 const BASE_URL = process.env.LEMON_SQUEZY_BASE_URL;
@@ -84,7 +85,8 @@ async function handleSubscriptionCreated(subscription: any) {
     const subscriptionType = config.lemonSqueezy.plan[product_id];
 
     // Updates the subscription in the database using details from the event and fetched variant.
-    const { error } = await supabaseAdmin
+
+    const updateSubscription$ = supabaseAdmin
       .from('subscriptions')
       .update({
         subscription_id: subscriptionId,
@@ -95,6 +97,13 @@ async function handleSubscriptionCreated(subscription: any) {
         active: status === 'active',
       })
       .eq('user_email', email);
+
+    const updateUser$ = updateUserPlan(email, {
+      plan: subscriptionType,
+      credits: config.planCredits[subscriptionType],
+    });
+
+    const [{ error }] = await Promise.all([updateSubscription$, updateUser$]);
 
     if (error) {
       console.error(error);
@@ -115,9 +124,9 @@ async function handleSubscriptionUpdated(subscription: any) {
   console.log(`[Subscription Updated] Updating subscription`);
 
   try {
-    const { error } = await supabaseAdmin
+    const { data, error } = await supabaseAdmin
       .from('subscriptions')
-      .select('id')
+      .select('id, user_email, type')
       .eq('subscription_id', subscriptionId)
       .single();
 
@@ -126,10 +135,21 @@ async function handleSubscriptionUpdated(subscription: any) {
       throw new Error(`Subscription not found supabase for id: ${subscriptionId}`);
     }
 
-    const { error: updateError } = await supabaseAdmin
+    const isActive = status === 'active';
+
+    // Update the subscription status in the database
+    const updateSubscription$ = supabaseAdmin
       .from('subscriptions')
-      .update({ active: status === 'active' })
+      .update({ active: isActive })
       .eq('subscription_id', subscriptionId);
+
+    const updatedPlan = isActive ? data.type : 'free';
+    const updateUser$ = updateUserPlan(data.user_email, {
+      plan: updatedPlan,
+      credits: config.planCredits[updatedPlan],
+    });
+
+    const [{ error: updateError }] = await Promise.all([updateSubscription$, updateUser$]);
 
     if (updateError) {
       console.error(updateError);
@@ -140,5 +160,13 @@ async function handleSubscriptionUpdated(subscription: any) {
   } catch (error: any) {
     console.error(error);
     throw new Error(`${error.message}`);
+  }
+}
+
+async function updateUserPlan(userEmail: string, data: { plan: EnumSubscription; credits: number }) {
+  const { error } = await supabaseAdmin.from('users').update(data).eq('email', userEmail);
+
+  if (error) {
+    throw new Error(error.message);
   }
 }
