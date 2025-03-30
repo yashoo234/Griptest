@@ -31,6 +31,9 @@ export type TypeConfig = {
     hideOnRoutes?: string[];
   };
   supportEmail: string;
+  planCredits: {
+    [key in EnumSubscription]: number;
+  };
   lemonSqueezy: TypePaymentGateway;
   stripe: TypePaymentGateway;
   loops: {

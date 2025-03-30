@@ -4,7 +4,7 @@
 // Each webhook request is validated for authenticity by verifying the signature using a secret key.
 
 import config from '@/config';
-import { EnumSubscriptionBillingCycle } from '@/types/types';
+import { EnumSubscription, EnumSubscriptionBillingCycle } from '@/types/types';
 import { supabaseAdmin } from '@/utils/supabase/admin';
 import { headers } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
@@ -81,7 +81,7 @@ async function handleSubscriptionCreated(subscription: Stripe.Subscription) {
     const customer = await stripe.customers.retrieve(customerId as string);
     const email = (customer as Stripe.Customer).email;
 
-    const { error } = await supabaseAdmin
+    const updateSubscription$ = supabaseAdmin
       .from('subscriptions')
       .update({
         subscription_id: subscriptionId,
@@ -92,6 +92,13 @@ async function handleSubscriptionCreated(subscription: Stripe.Subscription) {
         active: status === 'active',
       })
       .eq('user_email', email!);
+
+    const updateUser$ = updateUserPlan(email!, {
+      plan: subscriptionType,
+      credits: config.planCredits[subscriptionType],
+    });
+
+    const [{ error }] = await Promise.all([updateSubscription$, updateUser$]);
 
     if (error) {
       console.error(error);
@@ -112,9 +119,9 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
 
   try {
     // Check if the subscription exists in the database
-    const { error } = await supabaseAdmin
+    const { data, error } = await supabaseAdmin
       .from('subscriptions')
-      .select('id')
+      .select('id, user_email, type')
       .eq('subscription_id', subscriptionId)
       .single();
 
@@ -123,11 +130,21 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
       throw new Error(`Subscription not found supabase for id: ${subscriptionId}`);
     }
 
+    const isActive = status === 'active';
+
     // Update the subscription status in the database
-    const { error: updateError } = await supabaseAdmin
+    const updateSubscription$ = supabaseAdmin
       .from('subscriptions')
-      .update({ active: status === 'active' })
+      .update({ active: isActive })
       .eq('subscription_id', subscriptionId);
+
+    const updatedPlan = isActive ? data.type : 'free';
+    const updateUser$ = updateUserPlan(data.user_email, {
+      plan: updatedPlan,
+      credits: config.planCredits[updatedPlan],
+    });
+
+    const [{ error: updateError }] = await Promise.all([updateSubscription$, updateUser$]);
 
     if (updateError) {
       console.error(updateError);
@@ -138,5 +155,13 @@ async function handleSubscriptionUpdated(subscription: Stripe.Subscription) {
   } catch (error: any) {
     console.error(error);
     throw new Error(`${error.message}`);
+  }
+}
+
+async function updateUserPlan(userEmail: string, data: { plan: EnumSubscription; credits: number }) {
+  const { error } = await supabaseAdmin.from('users').update(data).eq('email', userEmail);
+
+  if (error) {
+    throw new Error(error.message);
   }
 }

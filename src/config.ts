@@ -4,7 +4,7 @@ import { TypeConfig } from './types/config';
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-const config = {
+const config: TypeConfig = {
   // Boolean flag to determine if Supabase should be enabled based on the availability of necessary environment variables.
   isSupabaseEnabled: !!supabaseUrl && !!supabaseKey,
 
@@ -26,6 +26,13 @@ const config = {
 
   // SUPPORT: Contact email for application support, should be updated with an actual email address.
   supportEmail: '',
+
+  // Configure the cridt system for the paid & free users
+  planCredits: {
+    free: 0,
+    standard: 10,
+    premium: 50,
+  },
 
   // LEMON SQUEEZY: Configuration for the Lemon Squeezy payment gateway, handling payments and subscriptions.
   lemonSqueezy: {
@@ -91,4 +98,4 @@ const config = {
   // },
 };
 
-export default config as TypeConfig;
+export default config;
