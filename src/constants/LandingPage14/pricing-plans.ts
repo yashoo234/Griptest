@@ -33,7 +33,7 @@ export const pricingPlans: PricingPlan[] = [
       { name: 'Stripe & Lemon Squeezy Payments', included: true },
       { name: 'Privacy Policy & ToS', included: true },
     ],
-    ctaLabel: 'Subscribe'
+    ctaLabel: 'Subscribe',
   },
   {
     id: 'pro',
@@ -51,7 +51,7 @@ export const pricingPlans: PricingPlan[] = [
       { name: 'Privacy Policy & ToS', included: true },
     ],
     isPopular: true,
-    ctaLabel: 'Subscribe'
+    ctaLabel: 'Subscribe',
   },
   {
     id: 'enterprise',
@@ -68,6 +68,6 @@ export const pricingPlans: PricingPlan[] = [
       { name: 'Stripe & Lemon Squeezy Payments', included: true },
       { name: 'Privacy Policy & ToS', included: true },
     ],
-    ctaLabel: 'Subscribe'
-  }
-]; 
+    ctaLabel: 'Subscribe',
+  },
+];

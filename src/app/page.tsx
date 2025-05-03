@@ -16,7 +16,6 @@
 // import LandingPage13 from '@/components/landing-pages/landing-page-13';
 import LandingPage14 from '@/components/landing-pages/landing-page-14';
 
-
 export default async function Home() {
   return (
     <>
@@ -34,7 +33,6 @@ export default async function Home() {
       {/* <LandingPage12 /> */}
       {/* <LandingPage13 /> */}
       <LandingPage14 />
-
     </>
   );
 }
