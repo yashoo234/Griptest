@@ -30,7 +30,7 @@ export default function Footer() {
   return (
     <div className='bg-lp14-bg px-4 pt-12 md:pt-20 mt-32 border-t border-lp14-border'>
       <div className='max-w-7xl mx-auto space-y-14 md:space-y-28'>
-        <div className='flex flex-col md:flex-row gap-10 md:gap-40'>
+        <div className='flex flex-col md:flex-row gap-10 lg:gap-40'>
           <div className='md:w-1/2 space-y-8'>
             <Image src='/lp13-logo.svg' alt='logo' width={124} height={124} className='w-32' />
             <p className='w-3/4 text-lp14-dark leading-7 font-medium'>
