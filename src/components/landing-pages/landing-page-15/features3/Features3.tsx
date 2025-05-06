@@ -41,7 +41,7 @@ export default async function Features() {
             return (
               <div
                 key={index}
-                className='rounded-2xl flex flex-col md:flex md:gap-8 gap-4 bg-[#FFFFFF] bg-opacity-5 border border-[#171717] md:py-8 pb-2 pt-4 md:px-4 px-2'>
+                className='rounded-2xl flex flex-col md:flex md:gap-8 gap-4 bg-[#FFFFFF]/5 border border-[#171717] md:py-8 pb-2 pt-4 md:px-4 px-2'>
                 <div className='min-h-52 flex items-center justify-center rounded-xl overflow-hidden border-[#F84F39] border-2'>
                   <Image src={card.url} alt={card.title} width={200} height={200} />
                 </div>

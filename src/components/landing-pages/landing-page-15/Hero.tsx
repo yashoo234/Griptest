@@ -9,10 +9,10 @@ export default function Hero() {
     <div className='flex flex-col lg:max-h-[560px] lg:flex-row justify-between items-center lg:items-start w-full bg-lp15-bg lg:px-0 px-6 lg:pl-32 py-12 lg:pb-0 gap-10 lg:gap-20 overflow-hidden'>
       <div className='flex flex-col w-full lg:w-1/3'>
         <div className='flex flex-col gap-5 lg:gap-[20px] mb-10 lg:mb-[40px] text-center lg:text-left'>
-          <h1 className='font-semibold text-3xl lg:text-4xl lg:text-[52px] text-[#431A11] leading-tight lg:leading-[1.2] tracking-tight lg:tracking-[-0.05em]'>
+          <h1 className='font-semibold text-3xl lg:text-4xl text-[#431A11] leading-tight lg:leading-[1.2] tracking-tight lg:-tracking-wider'>
             Generate modular AI Apps with ease and pace
           </h1>
-          <p className='text-[#6E4E46] text-sm lg:text-base lg:text-[16px] font-medium leading-relaxed lg:leading-[1.8] tracking-tight lg:tracking-[-0.011em]'>
+          <p className='text-[#6E4E46] text-sm lg:text-base font-medium leading-relaxed lg:leading-[1.8] tracking-tight lg:tracking-[-0.011em]'>
             Highly modular NextJS AI Boilerplate that allows you to ship any AI Apps within days. Save Hours
             of Effort and Use our robust Deployable code.
           </p>

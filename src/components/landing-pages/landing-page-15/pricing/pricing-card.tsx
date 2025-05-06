@@ -45,7 +45,7 @@ export const PricingCard = ({ plan, period }: PricingCardProps) => {
         <ul className='flex flex-col gap-4'>
           {plan.features.map((feature, index) => (
             <li key={index} className='flex items-center gap-2'>
-              <div className='w-5 h-5 flex-shrink-0'>
+              <div className='size-5 shrink-0'>
                 <Image src={tick} alt='' width={20} height={20} />
               </div>
               <span className='text-[15px] font-medium text-lp15-dark tracking-[-0.02em]'>
