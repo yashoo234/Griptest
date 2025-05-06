@@ -4,15 +4,15 @@ import { useRef } from 'react';
 import { motion, MotionValue, useTransform } from 'framer-motion';
 
 interface CardProps {
-  title: string;
-  index: number;
-  description: string;
-  color: string;
-  imageUrl: string | StaticImageData;
-  isFirst?: boolean;
-  progress?: any;
-  range?: any;
-  tiltDegree?: any;
+  title: string
+  index: number
+  description: string
+  color: string
+  imageUrl: string | StaticImageData
+  isFirst?: boolean
+  progress: MotionValue<number>
+  range: [number, number]    
+  tiltDegree: number            
 }
 
 const CardComponent = ({
