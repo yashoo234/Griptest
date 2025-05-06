@@ -154,6 +154,17 @@ module.exports = {
           bg: '#FAFAFA',
           accent: '#DFEAFF',
         },
+        lp15: {
+          primary: '#EC5229E5',
+          secondary: '#FCFCFC',
+          bgdark: '#1D120E',
+          dark: '#3E3E3E',
+          muted: '#70747B',
+          gray: '#ABABAB',
+          border: '#F2F1F1',
+          bg: '#FAF5F3',
+          accent: '#DFEAFF',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',
