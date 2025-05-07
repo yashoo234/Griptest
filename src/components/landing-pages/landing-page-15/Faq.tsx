@@ -36,7 +36,7 @@ const FAQ = () => {
   return (
     <div id='faq' className='w-full flex flex-col items-center gap-14 py-16 px-4'>
       <div className='text-center mb-20'>
-        <h2 className='text-3xl md:text-4xl font-medium mt-6 text-lp14-dark md:leading-[100%] tracking-tighter'>
+        <h2 className='text-3xl md:text-[40px] font-medium mt-6 text-lp15-accent md:leading-[120%] tracking-tighter'>
           Frequently Asked Questions
         </h2>
       </div>
@@ -48,7 +48,7 @@ const FAQ = () => {
               value={faq.id}
               className={cn(
                 'border-b border-lp14-border last:border-b-0',
-                'data-[state=open]:bg-lp14-bg data-[state=closed]:bg-white',
+                'data-[state=open]:bg-lp15-bg data-[state=closed]:bg-white data-[state=closed]:hover:bg-lp15-bg',
                 'transition-colors duration-300',
                 index === 0 ? 'rounded-t-2xl' : '',
                 index === faqItems.length - 1 ? 'rounded-b-2xl' : ''
@@ -57,10 +57,10 @@ const FAQ = () => {
                 <div className='flex items-center gap-4 w-full'>
                   <div
                     className={cn(
-                      'min-w-6 min-h-6 rounded-full transition-colors duration-300',
+                      'min-w-4 min-h-4 rounded-full transition-colors duration-300',
                       'group-data-[state=open]:bg-lp15-primary group-data-[state=closed]:bg-[#FFE3DF]'
                     )}></div>
-                  <span className='text-base font-medium text-lp14-dark tracking-tight text-left'>
+                  <span className='text-base font-medium text-lp15-accent tracking-tight text-left'>
                     {faq.question}
                   </span>
                 </div>
@@ -68,7 +68,7 @@ const FAQ = () => {
                   <ArrowDown />
                 </div>
               </AccordionTrigger>
-              <AccordionContent className='pl-[40px] pr-8 text-lp14-muted text-base font-medium leading-relaxed tracking-tight'>
+              <AccordionContent className='pl-[48px] pr-8 text-lp14-muted text-base font-medium leading-relaxed tracking-tight'>
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

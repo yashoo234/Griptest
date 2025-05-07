@@ -152,7 +152,7 @@ module.exports = {
           gray: '#ABABAB',
           border: '#F2F1F1',
           bg: '#FAFAFA',
-          accent: '#DFEAFF',
+          accent: '#6E4E46',
         },
         lp15: {
           primary: '#EC5229E5',
@@ -160,10 +160,10 @@ module.exports = {
           bgdark: '#1D120E',
           dark: '#3E3E3E',
           muted: '#70747B',
-          gray: '#ABABAB',
-          border: '#F2F1F1',
+          gray: '#6E4E46',
+          border: '#E3DDEB',
           bg: '#FAF5F3',
-          accent: '#DFEAFF',
+          accent: '#431A11',
         },
       },
       borderRadius: {

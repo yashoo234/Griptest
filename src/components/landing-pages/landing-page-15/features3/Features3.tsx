@@ -36,18 +36,18 @@ export default async function Features() {
           </span>
         </div>
 
-        <div className='flex gap-4 flex-col mx-4 md:flex-row'>
+        <div className='flex gap-4 flex-col mx-4 md:flex-row lg:min-w-[1322px]'>
           {cardDetails.map((card, index) => {
             return (
               <div
                 key={index}
-                className='rounded-2xl flex flex-col md:flex md:gap-8 gap-4 bg-[#FFFFFF]/5 border border-[#171717] md:py-8 pb-2 pt-4 md:px-4 px-2'>
+                className='rounded-2xl flex flex-col md:flex md:gap-8 gap-4 bg-[#FFFFFF]/5 border border-[#171717] md:pt-6 md:pb-8 pb-2 pt-4 md:px-6 px-2'>
                 <div className='min-h-52 flex items-center justify-center rounded-xl overflow-hidden border-[#F84F39] border-2'>
                   <Image src={card.url} alt={card.title} width={200} height={200} />
                 </div>
                 <div className='gap-2 flex flex-col text-left'>
-                  <p className='font-medium text-white md:text-2xl text-xl'>{card.title}</p>
-                  <span className='text-[#DEDEEBCC] leading-relaxed text-sm'>{card.content}</span>
+                  <p className='font-semibold text-white md:text-[32px] text-xl'>{card.title}</p>
+                  <span className='text-[#DEDEEBCC] font-medium leading-[186%] md:text-base text-sm'>{card.content}</span>
                 </div>
               </div>
             );

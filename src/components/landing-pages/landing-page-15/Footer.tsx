@@ -27,8 +27,8 @@ const footerSections: { [key: string]: FooterLink[] } = {
 export default function Footer() {
   return (
     <div className='bg-lp15-secondary px-4 pt-12 md:pt-20 md:pb-12 mt-32 border-t border-[#DEDEDE]'>
-      <div className='flex flex-col items-center justify-center md:px-32 gap-10 mb-28'>
-        <div className='text-4xl md:text-7xl font-semibold text-center'>
+      <div className='flex flex-col items-center justify-center md:px-44 gap-10 mb-28'>
+        <div className='text-4xl md:text-7xl font-semibold text-center text-lp15-accent md:leading-[120%] tracking-tighter md:tracking-[-4px]'>
           Join over 1 million developers to build your next AI app
         </div>
         <Button variant='primary' size='lg' className='text-lg md:text-xl md:px-20 md:py-8 rounded-full'>
@@ -39,7 +39,7 @@ export default function Footer() {
         <div className='flex flex-col md:flex-row gap-10 lg:gap-40'>
           <div className='md:w-1/2 space-y-8'>
             <Image src='/lp15-logo.svg' alt='logo' width={124} height={124} className='w-32' />
-            <p className='w-3/4 text-lp14-dark leading-7 font-medium'>
+            <p className='w-3/4 text-lp15-accent leading-7 font-medium'>
               Highly modular NextJS AI Boilerplate that allows you to ship an AI App super fast
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function Footer() {
             })}
           </div>
         </div>
-        <div className='flex justify-center text-lp15-muted'>© {new Date().getFullYear()} — Builderkit</div>
+        <div className='flex justify-center text-[12px] text-[#303950] opacity-50'>© {new Date().getFullYear()} — Builderkit</div>
       </div>
     </div>
   );

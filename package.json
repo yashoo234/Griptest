@@ -12,7 +12,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "next lint",
     "format": "prettier --write \"**/*.{ts,tsx,css,html,js,jsx,json}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "ngrok": "ngrok http 3000"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.20.9",

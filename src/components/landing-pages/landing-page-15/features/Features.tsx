@@ -13,16 +13,16 @@ const Features = () => {
   return (
     <div id='features' className='max-w-[90%] mx-auto px-4 pt-40'>
       <div className='text-center mb-20'>
-        <h2 className='text-3xl md:text-4xl font-medium mt-6 text-lp14-dark md:leading-[100%] tracking-tighter'>
+        <h2 className='text-3xl md:text-[40px] font-medium mt-6 text-lp15-accent md:leading-[120%] tracking-tighter'>
           Explore the power of
           <br />
           AI apps generation Workflow
         </h2>
-        <p className='text-lg font-normal mt-4 leading-[180%] tracking-tight text-zinc-600'>
+        <p className='text-lg font-medium mt-4 leading-[180%] tracking-tight text-lp15-gray'>
           All the necessary features to create your next AI App
         </p>
       </div>
-      <div className='mx-auto w-full' ref={container}>
+      <div className='mx-auto' ref={container}>
         {card.map((item, index) => {
           const tiltDegree = 2;
           return (

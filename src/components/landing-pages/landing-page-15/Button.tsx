@@ -15,7 +15,7 @@ const variantClasses = {
   secondary: 'text-[#0C0E1E] font-medium shadow-secondary-button border-[#EAEAEA] border rounded-md',
   tertiary:
     'bg-lp-15-primary font-medium shadow-primary-button text-white rounded-md border border-indigo-500',
-  primary: 'bg-lp15-primary font-medium -button text-white rounded-3xl',
+  primary: 'font-medium -button text-white rounded-3xl bg-gradient-to-b from-[rgba(236,82,41,0.9)] to-[#EC5229]',
 };
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
