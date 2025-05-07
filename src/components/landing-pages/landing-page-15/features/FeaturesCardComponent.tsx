@@ -37,11 +37,13 @@ const CardComponent = ({
           <div
             className={`flex flex-col md:flex-row items-start gap-6 md:gap-8 ${index % 2 === 0 ? 'bg-[#FFF8F6]' : 'bg-[#FAF6FF]'}`}>
             <div className='w-full md:w-1/2 space-y-4 px-4 py-6 md:p-10'>
-              <h2 className='text-2xl md:text-[40px] font-bold'>
+              <h2 className='text-2xl md:text-4xl font-semibold'>
                 <span style={{ color: color }}>Build</span> your AI apps{' '}
                 <span style={{ color: color }}>Fast</span>
               </h2>
-              <p className='text-lp15 font-medium-gray max-w-md text-sm md:text-[18px] md:leading-[186%] tracking-tight'>{description}</p>
+              <p className='text-lp15 font-medium-gray max-w-md text-sm md:text-[18px] md:leading-[186%] tracking-tight'>
+                {description}
+              </p>
             </div>
             <div
               className={`w-full md:w-1/2 md:min-h-[600px] mt-6 md:mt-0 flex justify-center items-center`}

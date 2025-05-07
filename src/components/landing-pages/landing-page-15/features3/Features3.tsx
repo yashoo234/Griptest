@@ -47,7 +47,9 @@ export default async function Features() {
                 </div>
                 <div className='gap-2 flex flex-col text-left'>
                   <p className='font-semibold text-white md:text-[32px] text-xl'>{card.title}</p>
-                  <span className='text-[#DEDEEBCC] font-medium leading-[186%] md:text-base text-sm'>{card.content}</span>
+                  <span className='text-[#DEDEEBCC] font-medium leading-[186%] md:text-base text-sm'>
+                    {card.content}
+                  </span>
                 </div>
               </div>
             );

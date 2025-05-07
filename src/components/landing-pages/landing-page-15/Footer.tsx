@@ -71,7 +71,9 @@ export default function Footer() {
             })}
           </div>
         </div>
-        <div className='flex justify-center text-[12px] text-[#303950] opacity-50'>© {new Date().getFullYear()} — Builderkit</div>
+        <div className='flex justify-center text-[12px] text-[#303950] opacity-50'>
+          © {new Date().getFullYear()} — Builderkit
+        </div>
       </div>
     </div>
   );
