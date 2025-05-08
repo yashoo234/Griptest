@@ -13,7 +13,8 @@ const variantClasses = {
   fill: 'text-black bg-white font-semibold',
   default: 'text-white bg-[#0C0E1E] rounded-md',
   secondary: 'text-[#0C0E1E] font-medium shadow-secondary-button border-[#EAEAEA] border rounded-md',
-  tertiary: 'bg-gradient-to-b from-[rgba(15,111,255,0.9)] to-[#0F6FFF] shadow-[0_-1px_1px_-1px_#00000024_inset] shadow-[0_4px_6px_0_#00000024] font-medium shadow-primary-button text-white rounded-md border border-indigo-500',
+  tertiary:
+    'bg-gradient-to-b from-[rgba(15,111,255,0.9)] to-[#0F6FFF] shadow-[0_-1px_1px_-1px_#00000024_inset] shadow-[0_4px_6px_0_#00000024] font-medium shadow-primary-button text-white rounded-md border border-indigo-500',
 };
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {

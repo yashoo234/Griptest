@@ -22,10 +22,7 @@ interface NavLinkProps {
 const NavLink: FC<NavLinkProps> = ({ href, children, className }) => (
   <Link
     href={href}
-    className={cn(
-      'text-sm tracking-tight leading-6 font-semibold text-lp14-dark',
-      className
-    )}>
+    className={cn('text-sm tracking-tight leading-6 font-semibold text-lp14-dark', className)}>
     {children}
   </Link>
 );

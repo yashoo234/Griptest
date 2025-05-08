@@ -12,7 +12,13 @@ interface FeatureCardProps {
   onClick: () => void;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ number, title, description, isActive = false, onClick }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({
+  number,
+  title,
+  description,
+  isActive = false,
+  onClick,
+}) => {
   return (
     <Card
       className={`rounded-3xl w-full border-none p-0 transition-all duration-300 cursor-pointer ${isActive ? 'bg-lp14-bg' : 'bg-white'}`}
@@ -70,11 +76,11 @@ const Feature3Menu = () => {
         <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-16'>
           <div className='w-full lg:w-1/3 flex flex-col gap-4'>
             {features.map((feature, index) => (
-              <FeatureCard 
-                key={feature.number} 
-                {...feature} 
+              <FeatureCard
+                key={feature.number}
+                {...feature}
                 isActive={index === activeIndex}
-                onClick={() => handleCardClick(index)} 
+                onClick={() => handleCardClick(index)}
               />
             ))}
           </div>
