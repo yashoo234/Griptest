@@ -12,6 +12,29 @@ interface FeatureCardProps {
   onClick: () => void;
 }
 
+const features = [
+  {
+    number: '01',
+    title: 'NextJS Boilerplate',
+    description: "Get access to the BuilderKit's Private Github Repo",
+  },
+  {
+    number: '02',
+    title: 'Pre-Built apps',
+    description: 'Explore a dynamic collection of AI applications .',
+  },
+  {
+    number: '03',
+    title: 'Admin Dashboard',
+    description: 'Maintain data from all your apps into beautifully designed dashboards.',
+  },
+  {
+    number: '04',
+    title: 'Integrations',
+    description: 'Authentication, Payments, Customer Support, Emails, All Major AI Models Supported',
+  },
+];
+
 const FeatureCard: React.FC<FeatureCardProps> = ({
   number,
   title,
@@ -42,29 +65,6 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 
 const Feature3Menu = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const features = [
-    {
-      number: '01',
-      title: 'NextJS Boilerplate',
-      description: "Get access to the BuilderKit's Private Github Repo",
-    },
-    {
-      number: '02',
-      title: 'Pre-Built apps',
-      description: 'Explore a dynamic collection of AI applications .',
-    },
-    {
-      number: '03',
-      title: 'Admin Dashboard',
-      description: 'Maintain data from all your apps into beautifully designed dashboards.',
-    },
-    {
-      number: '04',
-      title: 'Integrations',
-      description: 'Authentication, Payments, Customer Support, Emails, All Major AI Models Supported',
-    },
-  ];
 
   const handleCardClick = (index: number) => {
     setActiveIndex(index);

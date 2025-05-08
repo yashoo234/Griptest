@@ -6,11 +6,11 @@ export default function Hero() {
   return (
     <div className='flex flex-col items-center space-y-8 mt-4'>
       <div className='inline-flex items-center gap-2 bg-[#FFFBFB] rounded-[30px] py-1 pl-1 pr-4 border border-[#FFECEC]'>
-        <div className='bg-gradient-to-b from-[#FF4C4C]/70 to-[#FF4C4C] text-white text-xs font-medium rounded-[24px] px-[6px] py-[2px] border border-[#D82626] shadow-[0px_0px_0px_1px_rgba(216,38,38,1),inset_0px_-1px_1px_-1px_rgba(0,0,0,0.14)]'>
+        <div className='bg-gradient-to-b from-[#FF4C4C]/70 to-[#FF4C4C] text-white text-xs font-medium rounded-[24px] px-1.5 py-0.5 border-2 border-[#D82626]'>
           NEW
         </div>
         <span className='text-sm font-semibold text-lp14-dark'>Unlock Your Creative Spark!</span>
-        <div className='w-5 h-5 flex items-center justify-center'>
+        <div className='size-5 flex items-center justify-center'>
           <HiArrowRight />
         </div>
       </div>

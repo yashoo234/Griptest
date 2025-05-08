@@ -41,6 +41,7 @@ export type CardContent = {
   icon: string;
   iconBgColor: string;
 };
+
 export type BlogPost = {
   id: string;
   title: string;

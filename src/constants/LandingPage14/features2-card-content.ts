@@ -1,5 +1,6 @@
 import { CardContent } from '@/types/types';
 import { Key, Db, Dollar, Next, Robot, Seo } from '@/assets/landing-page-14/icons';
+
 export const cardsContent: CardContent[] = [
   {
     id: 'card1',

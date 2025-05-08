@@ -34,13 +34,6 @@ const GetStartedButton = () => (
     </Button>
   </NavLink>
 );
-const LoginButton = () => (
-  <NavLink href='/login'>
-    <Button variant='secondary' size='default'>
-      <span>Login</span>
-    </Button>
-  </NavLink>
-);
 
 const Navbar = () => (
   <nav className='bg-white border-b border-lp14-border'>
@@ -60,7 +53,11 @@ const Navbar = () => (
         </div>
 
         <div className='hidden md:flex items-center gap-[10px]'>
-          <LoginButton />
+          <NavLink href='/login'>
+            <Button variant='secondary' size='default'>
+              <span>Login</span>
+            </Button>
+          </NavLink>
           <GetStartedButton />
         </div>
       </>
