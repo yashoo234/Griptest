@@ -62,8 +62,8 @@ const Feedback = () => {
   return (
     <div id='testimonial' className='w-11/12 max-w-7xl mx-auto space-y-10 md:space-y-20 relative py-32'>
       <div className='text-center mb-20'>
-        <p className='text-sm font-semibold text-lp14-primary'>Testimonials</p>
-        <h2 className='text-3xl md:text-4xl font-medium mt-6 text-lp14-dark md:leading-[100%] tracking-tighter'>
+        <p className='text-sm font-semibold text-lp14-primary leading-6'>Testimonials</p>
+        <h2 className='text-3xl md:text-4xl font-medium mt-6 text-lp14-dark md:leading-snug tracking-[-1.68px]'>
           What our customers are saying about us.
         </h2>
       </div>

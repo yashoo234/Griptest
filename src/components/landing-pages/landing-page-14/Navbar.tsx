@@ -23,7 +23,7 @@ const NavLink: FC<NavLinkProps> = ({ href, children, className }) => (
   <Link
     href={href}
     className={cn(
-      'text-sm tracking-tight leading-6 font-semibold text-lp14-dark hover:text-lp14-dark',
+      'text-sm tracking-tight leading-6 font-semibold text-lp14-dark',
       className
     )}>
     {children}
@@ -47,14 +47,14 @@ const LoginButton = () => (
 
 const Navbar = () => (
   <nav className='bg-white border-b border-lp14-border'>
-    <div className='max-w-[90rem] flex justify-between items-center mx-auto p-4'>
+    <div className='max-w-[90rem] flex justify-between items-center mx-auto py-3 px-6'>
       <Link href='https://www.builderkit.ai'>
         <Image src='/lp13-logo.svg' width={124} height={24} alt='logo' />
       </Link>
 
       {/* Desktop version */}
       <>
-        <div className='hidden md:flex items-center space-x-4'>
+        <div className='hidden font-semibold text-[15px] leading-6 tracking-[-2%] md:flex items-center space-x-4'>
           {NavItems.map((item) => (
             <NavLink key={item.label} href={item.url}>
               {item.label}

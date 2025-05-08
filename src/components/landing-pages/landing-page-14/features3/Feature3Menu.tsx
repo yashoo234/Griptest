@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import FeatureImage from '@/assets/landing-page-14/images/Image.png';
@@ -9,12 +9,14 @@ interface FeatureCardProps {
   title: string;
   description: string;
   isActive?: boolean;
+  onClick: () => void;
 }
 
-const FeatureCard: React.FC<FeatureCardProps> = ({ number, title, description, isActive = false }) => {
+const FeatureCard: React.FC<FeatureCardProps> = ({ number, title, description, isActive = false, onClick }) => {
   return (
     <Card
-      className={`rounded-3xl w-full p-0 border-none transition-all duration-300 ${isActive ? 'bg-white shadow-lg scale-105' : 'bg-lp14-bg'}`}>
+      className={`rounded-3xl w-full border-none p-0 transition-all duration-300 cursor-pointer ${isActive ? 'bg-lp14-bg' : 'bg-white'}`}
+      onClick={onClick}>
       <CardContent className='flex items-start gap-4 p-5 md:p-6'>
         <div
           className={`text-3xl font-bold transition-colors duration-300 ${isActive ? 'text-lp14-primary' : 'text-lp14-gray'}`}>
@@ -34,14 +36,13 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ number, title, description, i
 
 const Feature3Menu = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const sectionRef = useRef<HTMLElement>(null);
 
   const features = [
     {
       number: '01',
       title: 'NextJS Boilerplate',
       description: "Get access to the BuilderKit's Private Github Repo",
-    }, // isActive removed, will be dynamic
+    },
     {
       number: '02',
       title: 'Pre-Built apps',
@@ -59,38 +60,22 @@ const Feature3Menu = () => {
     },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
-
-      const sectionTop = sectionRef.current.offsetTop;
-      const sectionHeight = sectionRef.current.offsetHeight;
-      const scrollY = window.scrollY;
-      const viewportHeight = window.innerHeight;
-      const scrollCenterInSection = scrollY + viewportHeight / 2 - sectionTop;
-      const progress = Math.max(0, Math.min(1, scrollCenterInSection / sectionHeight));
-      const newIndex = Math.min(features.length - 1, Math.floor(progress * features.length));
-
-      if (newIndex !== activeIndex) {
-        setActiveIndex(newIndex);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [features.length, activeIndex]);
+  const handleCardClick = (index: number) => {
+    setActiveIndex(index);
+  };
 
   return (
-    <section ref={sectionRef} className='bg-white'>
+    <section className='bg-white'>
       <div className='container px-2'>
         <div className='flex flex-col lg:flex-row items-center gap-8 lg:gap-16'>
           <div className='w-full lg:w-1/3 flex flex-col gap-4'>
             {features.map((feature, index) => (
-              <FeatureCard key={feature.number} {...feature} isActive={index === activeIndex} />
+              <FeatureCard 
+                key={feature.number} 
+                {...feature} 
+                isActive={index === activeIndex}
+                onClick={() => handleCardClick(index)} 
+              />
             ))}
           </div>
 

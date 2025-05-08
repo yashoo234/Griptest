@@ -37,7 +37,7 @@ export const featuresData: FeatureDataType[] = [
       'Transform your workflow with a suite of powerful, auto-generated AI apps that adapt to your needs and supercharge your productivity.',
     imageUrl: efficiencyImage,
     bgColor: '#003079',
-    height: 462,
+    height: 571,
   },
   {
     tag: {
@@ -49,7 +49,7 @@ export const featuresData: FeatureDataType[] = [
     description:
       'Dive into a diverse collection of AI apps that come pre-built and ready to deploy, saving you time and effort while delivering powerful results.',
     imageUrl: instantSolutionsImage,
-    height: 462,
+    height: 571,
   },
   {
     tag: {

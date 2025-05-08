@@ -26,9 +26,9 @@ export default function Subscribe() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder='Enter your work email'
-            className='w-full h-12 px-4 rounded-lg text-sm border border-lp14-border text-lp14-dark bg-white  placeholder:text-lp14-gray'
+            className='w-full h-12 px-4 rounded-2xl text-sm leading-5 border border-lp14-border text-lp14-dark bg-white  placeholder:text-lp14-gray'
           />
-          <Button type='submit' variant='tertiary' className='absolute right-1 top-1 h-10'>
+          <Button type='submit' variant='tertiary' className='absolute right-1 top-1 h-10 rounded-xl'>
             Subscribe
           </Button>
         </div>

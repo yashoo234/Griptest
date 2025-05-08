@@ -36,8 +36,8 @@ const FAQ = () => {
   return (
     <div id='faq' className='w-full flex flex-col items-center gap-14 py-16 px-4'>
       <div className='text-center mb-20'>
-        <p className='text-sm font-semibold text-lp14-primary'>FAQ's</p>
-        <h2 className='text-3xl md:text-4xl font-medium mt-6 text-lp14-dark md:leading-[100%] tracking-tighter'>
+        <p className='text-sm font-semibold text-lp14-primary leading-6'>FAQ's</p>
+        <h2 className='text-3xl md:text-4xl font-medium mt-6 text-lp14-dark md:leading-snug tracking-[-1.68px]'>
           Frequently Asked Questions
         </h2>
       </div>
@@ -58,8 +58,8 @@ const FAQ = () => {
                 <div className='flex items-center gap-4 w-full'>
                   <div
                     className={cn(
-                      'min-w-6 min-h-6 rounded-full transition-colors duration-300',
-                      'group-data-[state=open]:bg-lp14-primary group-data-[state=closed]:bg-lp14-accent'
+                      'min-w-4 min-h-4 rounded-full transition-colors duration-300',
+                      'group-data-[state=open]:bg-lp14-primary group-data-[state=closed]:bg-lp14-accent data-[state=closed]:hover:bg-lp14-bg'
                     )}></div>
                   <span className='text-base font-medium text-lp14-dark tracking-tight text-left'>
                     {faq.question}
@@ -69,7 +69,7 @@ const FAQ = () => {
                   <ArrowDown />
                 </div>
               </AccordionTrigger>
-              <AccordionContent className='pl-[40px] pr-8 text-lp14-muted text-base font-medium leading-relaxed tracking-tight'>
+              <AccordionContent className='pl-[48px] pr-8 text-lp14-muted text-base font-medium leading-relaxed tracking-tight'>
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

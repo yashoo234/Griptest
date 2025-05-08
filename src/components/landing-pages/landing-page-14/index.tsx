@@ -22,8 +22,9 @@ export default function LandingPage14() {
       <div className='max-w-6xl mx-auto py-16 px-4 '>
         <Hero />
       </div>
-      <div className='w-full border border-transparent bg-gradient-to-b from-white via-[#E1EDFF] to-white md:mt-16 py-12'>
-        <Image src={hero} width={1042} height={550} alt='hero' className='mx-auto rounded-xl' />
+      <div className='relative w-full border border-transparent bg-gradient-to-b from-white via-[#E1EDFF] to-white md:mt-16 py-12'>
+        <Image src={hero} width={1042} height={550} alt='hero' className='relative z-0 mx-auto rounded-xl' />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent from-70% to-white to-80% z-10"></div>
       </div>
       <FeaturedOn />
       <Features />

@@ -5,8 +5,8 @@ import { HiArrowRight } from 'react-icons/hi';
 export default function Hero() {
   return (
     <div className='flex flex-col items-center space-y-8 mt-4'>
-      <div className='inline-flex items-center gap-2 bg-white rounded-[30px] py-1 pl-1 pr-4 mb-4 border border-lp14-accent'>
-        <div className='bg-gradient-to-b from-[#FF4C4C]/70 to-[#FF4C4C] text-white text-xs font-medium rounded-[24px] px-3 py-2 border border-[#D82626] shadow-[0px_0px_0px_1px_rgba(216,38,38,1),inset_0px_-1px_1px_-1px_rgba(0,0,0,0.14)]'>
+      <div className='inline-flex items-center gap-2 bg-[#FFFBFB] rounded-[30px] py-1 pl-1 pr-4 border border-[#FFECEC]'>
+        <div className='bg-gradient-to-b from-[#FF4C4C]/70 to-[#FF4C4C] text-white text-xs font-medium rounded-[24px] px-[6px] py-[2px] border border-[#D82626] shadow-[0px_0px_0px_1px_rgba(216,38,38,1),inset_0px_-1px_1px_-1px_rgba(0,0,0,0.14)]'>
           NEW
         </div>
         <span className='text-sm font-semibold text-lp14-dark'>Unlock Your Creative Spark!</span>
@@ -14,12 +14,12 @@ export default function Hero() {
           <HiArrowRight />
         </div>
       </div>
-      <h1 className=' md:max-w-[738px] font-medium text-3xl md:text-6xl text-center mx-auto tracking-[-1.68px] md:leading-[56px] bg-clip-text'>
+      <h1 className=' md:max-w-[738px] font-medium text-3xl md:text-5xl text-center mx-auto tracking-[-1.68px] md:leading-[56px] bg-clip-text'>
         Generate modular AI
         <br /> Apps with ease and pace
       </h1>
 
-      <p className='text-zinc-500 text-sm md:text-base md:leading-8 text-center tracking-tight mb-2'>
+      <p className='text-[#878787] text-sm md:text-base md:leading-8 text-center tracking-tight mb-2'>
         Highly modular NextJS AI Boilerplate that allows you to ship any AI Apps
         <br />
         within days. Save Hours of Effort and Use our robust Deployable code.

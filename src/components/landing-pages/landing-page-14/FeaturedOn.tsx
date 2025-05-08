@@ -1,10 +1,10 @@
 import React from 'react';
-import asana from '@/assets/landing-page-14/images/asana.png';
-import shopify from '@/assets/landing-page-14/images/shopify.png';
-import ghost from '@/assets/landing-page-14/images/ghost.png';
-import rippling from '@/assets/landing-page-14/images/rippling.png';
-import himalayas from '@/assets/landing-page-14/images/himalayas.png';
-import square from '@/assets/landing-page-14/images/square.png';
+import asana from '@/assets/landing-page-14/images/asana.svg';
+import shopify from '@/assets/landing-page-14/images/shopify.svg';
+import ghost from '@/assets/landing-page-14/images/ghost.svg';
+import rippling from '@/assets/landing-page-14/images/rippling.svg';
+import himalayas from '@/assets/landing-page-14/images/himalayas.svg';
+import square from '@/assets/landing-page-14/images/square.svg';
 import Image from 'next/image';
 
 const imageSrc = [shopify, asana, ghost, rippling, himalayas, square];

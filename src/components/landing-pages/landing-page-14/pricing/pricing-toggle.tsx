@@ -7,7 +7,7 @@ interface PricingToggleProps {
 
 export const PricingToggle = ({ period, onChange }: PricingToggleProps) => {
   return (
-    <div className='inline-flex p-1 w-56 rounded-lg border border-lp14-border bg-lp14-bg'>
+    <div className='inline-flex p-1 gap-2 w-56 rounded-lg border border-lp14-border bg-lp14-bg'>
       <button
         type='button'
         onClick={() => onChange('monthly')}
@@ -20,7 +20,7 @@ export const PricingToggle = ({ period, onChange }: PricingToggleProps) => {
       <button
         type='button'
         onClick={() => onChange('annual')}
-        className={`relative py-1 w-full px-4 rounded-md text-sm font-semibold tracking-[-0.02em] transition-colors ${
+        className={`relative py-1 w-full pr-4 rounded-md text-sm font-semibold tracking-[-0.02em] transition-colors ${
           period === 'annual' ? 'bg-white border border-lp14-border text-lp14-dark' : 'text-lp14-muted'
         }`}>
         Annual
