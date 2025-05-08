@@ -1,6 +1,7 @@
 import { BlogPost } from '@/types/types';
 import Thumbnail from '@/assets/landing-page-14/images/Thumbnail.png';
 import Thumbnail1 from '@/assets/landing-page-14/images/Thumbnail-1.png';
+
 export const blogPosts: BlogPost[] = [
   {
     id: '1',
