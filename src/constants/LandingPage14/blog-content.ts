@@ -11,7 +11,7 @@ export const blogPosts: BlogPost[] = [
     date: '2024-08-13',
     formattedDate: 'August 13, 2024',
     image: Thumbnail,
-    slug: 'public-url-webhook-testing',
+    slug: '#',
     backgroundColor: '#0F6FFF',
   },
   {
@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     date: '2024-07-08',
     formattedDate: 'July 08, 2024',
     image: Thumbnail1,
-    slug: 'gpt-powered-blog-generator',
+    slug: '#',
     backgroundColor: '#040811',
   },
 ];

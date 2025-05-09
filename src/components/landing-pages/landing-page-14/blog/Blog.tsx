@@ -1,5 +1,6 @@
 import { blogPosts } from '@/constants/LandingPage14/blog-content';
 import BlogCard from './BlogCard';
+import Link from 'next/link';
 
 const Blog = () => {
   return (
@@ -16,7 +17,9 @@ const Blog = () => {
 
         <div className='mt-16 flex flex-wrap justify-center gap-6'>
           {blogPosts.map((post) => (
-            <BlogCard key={post.id} post={post} />
+            <Link href={post.slug} key={post.id}>
+              <BlogCard key={post.id} post={post} />
+            </Link>
           ))}
         </div>
       </div>

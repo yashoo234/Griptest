@@ -23,7 +23,7 @@ const footerSections: { [key: string]: FooterLink[] } = {
     { label: 'Pricing', link: '#pricing' },
     { label: "FAQ's", link: '#faq' },
   ],
-  CONTACTS: [{ label: 'vatsal1811@gmail.com', link: 'mailto:vatsal1811@gmail.com' }, { label: 'India' }],
+  CONTACTS: [{ label: 'hello@builderkit.ai', link: 'mailto:hello@builderkit.ai' }, { label: 'India' }],
 };
 
 export default function Footer() {
@@ -36,9 +36,11 @@ export default function Footer() {
             <p className='w-3/4 text-lp14-dark leading-7 font-medium'>
               Highly modular NextJS AI Boilerplate that allows you to ship an AI App super fast
             </p>
-            <Button variant='tertiary' size='md' className='text-base'>
+            <Button variant='tertiary' size='md'>
+            <Link href='#' className='text-base flex justify-center items-center gap-2'>
               Try now for free
               <ArrowRightIcon className='ml-2' />
+            </Link>
             </Button>
           </div>
 
