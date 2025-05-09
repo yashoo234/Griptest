@@ -37,10 +37,10 @@ export default function Footer() {
               Highly modular NextJS AI Boilerplate that allows you to ship an AI App super fast
             </p>
             <Button variant='tertiary' size='md'>
-            <Link href='#' className='text-base flex justify-center items-center gap-2'>
-              Try now for free
-              <ArrowRightIcon className='ml-2' />
-            </Link>
+              <Link href='#' className='text-base flex justify-center items-center gap-2'>
+                Try now for free
+                <ArrowRightIcon className='ml-2' />
+              </Link>
             </Button>
           </div>
 

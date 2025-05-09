@@ -16,7 +16,7 @@ export const FeatureCard = ({ card }: FeatureCardProps) => {
           alt={`${card.title} icon`}
           width={32}
           height={32}
-          className='w-6 h-6 text-white'
+          className='size-6 text-white'
         />
       </div>
       <div className='flex flex-col gap-2'>

@@ -22,7 +22,7 @@ const FeatureCard = ({
       }}>
       <div className='flex flex-col self-stretch gap-3 px-6 pt-6 pb-0 w-full'>
         <div className='flex items-center gap-2'>
-          <div className='flex items-center justify-center w-6 h-6 rounded-sm'>
+          <div className='flex items-center justify-center size-6 rounded-sm'>
             <Image
               src={content.tag.icon}
               alt={content.tag.text}
@@ -50,7 +50,7 @@ const FeatureCard = ({
           </p>
         </div>
       </div>
-      <div className='relative rounded-md z-50 w-full flex-grow'>
+      <div className='relative rounded-md z-50 w-full grow'>
         <Image src={imageUrl} alt={content.title} fill className='object-contain' />
       </div>
     </div>

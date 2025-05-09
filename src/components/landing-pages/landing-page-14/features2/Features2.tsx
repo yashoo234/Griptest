@@ -14,7 +14,7 @@ const Features2 = () => {
           payments, get your production-ready app within hours.
         </p>
       </div>
-      <div className='mt-14 mx-auto max-w-[1024px]'>
+      <div className='mt-14 mx-auto max-w-screen-lg'>
         <FeatureCardGroup />
       </div>
     </div>
