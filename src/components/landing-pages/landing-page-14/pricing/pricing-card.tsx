@@ -20,7 +20,7 @@ export const PricingCard = ({ plan, period }: PricingCardProps) => {
           ? 'relative shadow-[0px_-8px_0px_0px_rgba(15,111,255,1)]'
           : 'shadow-[0px_-8px_0px_0px_rgba(248,249,250,1)]'
       }`}>
-      {isPopular && <div className='absolute top-0 left-0 right-0 h-2 rounded-t-2xl' aria-hidden='true' />}
+      {isPopular && <div className='absolute top-0 inset-x-0 h-2 rounded-t-2xl' aria-hidden='true' />}
 
       <div className='flex flex-col gap-4'>
         <h3 className='text-base font-medium text-lp14-dark tracking-[-0.03em]'>{plan.name}</h3>
@@ -41,7 +41,7 @@ export const PricingCard = ({ plan, period }: PricingCardProps) => {
         <ul className='flex flex-col gap-4'>
           {plan.features.map((feature, index) => (
             <li key={index} className='flex items-center gap-2'>
-              <div className='w-5 h-5 flex-shrink-0'>
+              <div className='size-5 shrink-0'>
                 <Image src={TickCircle} alt='' width={20} height={20} />
               </div>
               <span className='text-[15px] font-medium text-lp14-dark tracking-[-0.02em]'>

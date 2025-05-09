@@ -41,7 +41,7 @@ const FAQ = () => {
           Frequently Asked Questions
         </h2>
       </div>
-      <div className='border border-lp14-border rounded-2xl overflow-hidden w-full max-w-[640px]'>
+      <div className='border border-lp14-border rounded-2xl overflow-hidden w-full max-w-screen-sm'>
         <Accordion type='single' collapsible defaultValue='item-1' className='w-full'>
           {faqItems.map((faq, index) => (
             <AccordionItem

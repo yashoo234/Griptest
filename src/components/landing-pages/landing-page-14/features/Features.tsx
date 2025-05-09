@@ -14,7 +14,7 @@ const Features = () => {
           All the necessary features to create your next AI App
         </p>
       </div>
-      <div className='mt-20 mx-auto max-w-[1024px]'>
+      <div className='mt-20 mx-auto max-w-screen-lg'>
         <FeatureGrid />
       </div>
     </div>
