@@ -32,11 +32,11 @@ export const PricingCard = ({ plan, period }: PricingCardProps) => {
           <span className='text-sm text-lp14-gray mb-1 tracking-[-0.02em]'>/{period}</span>
         </div>
         <Link href={'#'}>
-        <Button
-          variant={isPopular ? 'tertiary' : 'secondary'}
-          className='w-full flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-semibold'>
-          {plan.ctaLabel}
-        </Button>
+          <Button
+            variant={isPopular ? 'tertiary' : 'secondary'}
+            className='w-full flex items-center justify-center gap-2 py-2 rounded-lg text-sm font-semibold'>
+            {plan.ctaLabel}
+          </Button>
         </Link>
         <ul className='flex flex-col gap-4'>
           {plan.features.map((feature, index) => (
