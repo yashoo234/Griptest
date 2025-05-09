@@ -4,7 +4,7 @@
 // import LandingPage1 from '@/components/landing-pages/landing-page-1';
 // import LandingPage2 from '@/components/landing-pages/landing-page-2';
 // import LandingPage3 from '@/components/landing-pages/landing-page-3';
-import LandingPage4 from '@/components/landing-pages/landing-page-4';
+// import LandingPage4 from '@/components/landing-pages/landing-page-4';
 // import LandingPage5 from '@/components/landing-pages/landing-page-5';
 // import LandingPage6 from '@/components/landing-pages/landing-page-6';
 // import LandingPage7 from '@/components/landing-pages/landing-page-7';
@@ -14,6 +14,7 @@ import LandingPage4 from '@/components/landing-pages/landing-page-4';
 // import LandingPage11 from '@/components/landing-pages/landing-page-11';
 // import LandingPage12 from '@/components/landing-pages/landing-page-12';
 // import LandingPage13 from '@/components/landing-pages/landing-page-13';
+import LandingPage14 from '@/components/landing-pages/landing-page-14';
 
 export default async function Home() {
   return (
@@ -21,7 +22,7 @@ export default async function Home() {
       {/* <LandingPage1 /> */}
       {/* <LandingPage2 /> */}
       {/* <LandingPage3 /> */}
-      <LandingPage4 />
+      {/* <LandingPage4 /> */}
       {/* <LandingPage5 /> */}
       {/* <LandingPage6 /> */}
       {/* <LandingPage7 /> */}
@@ -31,6 +32,7 @@ export default async function Home() {
       {/* <LandingPage11 /> */}
       {/* <LandingPage12 /> */}
       {/* <LandingPage13 /> */}
+      <LandingPage14 />
     </>
   );
 }
