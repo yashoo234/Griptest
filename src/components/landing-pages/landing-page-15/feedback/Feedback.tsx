@@ -32,7 +32,7 @@ const Feedback = () => {
   const sliderRef = useRef(null);
   return (
     <div className='bg-lp15-bgdark mt-32 md:mt-40'>
-      <div className='w-11/12 mx-auto space-y-10 md:space-y-20 pb-28 pt-40 md:py-40 relative'>
+      <div className='w-11/12 space-y-10 md:space-y-20 pb-28 pt-40 md:py-40 relative mx-auto max-w-7xl'>
         <div className='max-w-xl mx-auto text-center space-y-7'>
           <h2 className='text-3xl md:text-4xl font-medium text-white'>People Say Nice Things</h2>
           <p className='text-white/60 text-sm md:text-base leading-relaxed'>
@@ -42,9 +42,12 @@ const Feedback = () => {
         </div>
 
         <div className='w-full'>
-          <Slider ref={sliderRef} {...settings} className='lp-11-slider space-y-4'>
+          <Slider
+            ref={sliderRef}
+            {...settings}
+            className='lp-11-slider space-y-4 flex justify-center items-center'>
             {feedbacks.map(({ content, author, role }, index) => (
-              <div key={index} className='bg-[#281B16] rounded-3xl p-8 space-y-14'>
+              <div key={index} className='bg-[#281B16] rounded-3xl p-8 space-y-14 max-w-[500px]'>
                 <p className='text-white/60 text-sm md:text-base md:leading-7 font-light'>{content}</p>
 
                 <div className='flex items-center gap-2 sm:gap-4 '>

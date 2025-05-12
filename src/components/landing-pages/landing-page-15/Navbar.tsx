@@ -42,7 +42,7 @@ const LoginButton = () => (
 
 const Navbar = () => (
   <nav className='bg-lp15-bg border-b border-lp15-border'>
-    <div className='max-w-[90rem] flex justify-between items-center py-4 mx-4 md:px-28'>
+    <div className='flex justify-between items-center py-4 mx-4 md:px-32 lg:mx-auto max-w-screen-2xl'>
       <Link href='https://www.builderkit.ai'>
         <Image src='/lp15-logo.svg' width={124} height={24} alt='logo' />
       </Link>
