@@ -27,7 +27,7 @@ const footerSections: { [key: string]: FooterLink[] } = {
 export default function Footer() {
   return (
     <div className='bg-lp15-secondary px-4 pt-12 md:pt-20 md:pb-12 mt-32 border-t border-[#DEDEDE]'>
-      <div className='flex flex-col items-center justify-center md:px-44 gap-10 mb-28'>
+      <div className='flex flex-col items-center justify-center md:px-44 gap-10 mb-28 max-w-7xl mx-auto'>
         <div className='text-4xl md:text-7xl font-semibold text-center text-lp15-accent md:leading-[120%] tracking-tighter md:tracking-[-4px]'>
           Join over 1 million developers to build your next AI app
         </div>
