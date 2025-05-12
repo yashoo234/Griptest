@@ -39,7 +39,7 @@ export type CardContent = {
   title: string;
   description: string;
   icon: string;
-  iconBgColor: string;
+  iconBgColor?: string;
 };
 
 export type BlogPost = {
