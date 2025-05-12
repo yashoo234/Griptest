@@ -21,7 +21,7 @@ const footerSections: { [key: string]: FooterLink[] } = {
     { label: 'Pricing', link: '#pricing' },
     { label: "FAQ's", link: '#faq' },
   ],
-  CONTACTS: [{ label: 'vatsal1811@gmail.com', link: 'mailto:vatsal1811@gmail.com' }, { label: 'India' }],
+  CONTACTS: [{label: 'hello@builderkit.ai', link: 'mailto:hello@builderkit.ai'}, { label: 'India' }],
 };
 
 export default function Footer() {
@@ -31,9 +31,10 @@ export default function Footer() {
         <div className='text-4xl md:text-7xl font-semibold text-center text-lp15-accent md:leading-[120%] tracking-tighter md:tracking-[-4px]'>
           Join over 1 million developers to build your next AI app
         </div>
+        <Link href={'#'}>
         <Button variant='primary' size='lg' className='text-lg md:text-xl md:px-20 md:py-8 rounded-full'>
           Try now for free
-        </Button>
+        </Button></Link>
       </div>
       <div className='max-w-7xl mx-auto space-y-14 md:space-y-28'>
         <div className='flex flex-col md:flex-row gap-10 lg:gap-40'>

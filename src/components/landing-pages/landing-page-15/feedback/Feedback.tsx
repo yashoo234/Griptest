@@ -8,9 +8,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import feedbacks from './content';
 import avatar from '@/assets/landing-page-11/images/feedback.svg';
 
-const Feedback = () => {
-  const sliderRef = useRef(null);
-
   const settings = {
     dots: false,
     infinite: false,
@@ -30,7 +27,9 @@ const Feedback = () => {
       },
     ],
   };
-
+  
+const Feedback = () => {
+  const sliderRef = useRef(null);
   return (
     <div className='bg-lp15-bgdark mt-32 md:mt-40'>
       <div className='w-11/12 mx-auto space-y-10 md:space-y-20 pb-28 pt-40 md:py-40 relative'>

@@ -2,6 +2,7 @@
 import Image, { StaticImageData } from 'next/image';
 import { useRef } from 'react';
 import { motion, MotionValue, useTransform } from 'framer-motion';
+import { cn } from '@/utils/utils';
 
 interface CardProps {
   title: string;
@@ -35,7 +36,10 @@ const CardComponent = ({
       <div className={`md:min-h-[400px] md:min-w-[1110px] rounded-3xl overflow-hidden my-4 md:mb-10`}>
         <div className='container mx-0 px-0'>
           <div
-            className={`flex flex-col md:flex-row items-start gap-6 md:gap-8 ${index % 2 === 0 ? 'bg-[#FFF8F6]' : 'bg-[#FAF6FF]'}`}>
+            className={cn(
+              'flex flex-col md:flex-row items-start gap-6 md:gap-8',
+              index % 2 === 0 ? 'bg-[#FFF8F6]' : 'bg-[#FAF6FF]'
+            )}>
             <div className='w-full md:w-1/2 space-y-4 px-4 py-6 md:p-10'>
               <h2 className='text-2xl md:text-4xl font-semibold'>
                 <span style={{ color: color }}>Build</span> your AI apps{' '}

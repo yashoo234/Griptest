@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <div className='flex flex-col lg:max-h-[560px] lg:flex-row justify-between items-center lg:items-start w-full bg-gradient-to-b from-[#FAF5F3] to-[#FAF3F3] lg:px-0 px-6 lg:pl-32 pt-16 lg:pb-0 gap-10 lg:gap-20 overflow-hidden'>
+    <div className='flex flex-col lg:max-h-[560px] lg:flex-row justify-between items-center lg:items-start w-full bg-[#FAF3F3] lg:px-0 px-6 lg:pl-32 pt-16 lg:pb-0 gap-10 lg:gap-20 overflow-hidden'>
       <div className='flex flex-col w-full lg:w-[44%]'>
         <div className='flex flex-col gap-5 lg:gap-[20px] mb-10 lg:mb-[40px] text-center lg:text-left'>
           <h1 className='font-semibold text-3xl lg:text-[52px] text-[#431A11] leading-tight lg:leading-[120%] tracking-tighter'>
