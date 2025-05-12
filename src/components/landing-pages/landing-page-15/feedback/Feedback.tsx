@@ -8,26 +8,26 @@ import 'slick-carousel/slick/slick-theme.css';
 import feedbacks from './content';
 import avatar from '@/assets/landing-page-11/images/feedback.svg';
 
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 3.6,
-    slidesToScroll: 1,
-    rows: 2,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2.2 },
-      },
-      {
-        breakpoint: 640,
-        settings: { slidesToShow: 1.2 },
-      },
-    ],
-  };
-  
+const settings = {
+  dots: false,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 3.6,
+  slidesToScroll: 1,
+  rows: 2,
+  initialSlide: 0,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: { slidesToShow: 2.2 },
+    },
+    {
+      breakpoint: 640,
+      settings: { slidesToShow: 1.2 },
+    },
+  ],
+};
+
 const Feedback = () => {
   const sliderRef = useRef(null);
   return (

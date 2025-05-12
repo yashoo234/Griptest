@@ -14,14 +14,13 @@ export const PricingCard = ({ plan, period }: PricingCardProps) => {
   const isPopular = plan.isPopular;
 
   return (
-<div
-  className={cn(
-    'flex flex-col gap-4 p-6 rounded-2xl border bg-white w-full max-w-sm',
-    isPopular
-      ? 'relative shadow-[0px_-8px_0px_0px_#FF4F00] pt-20'
-      : 'shadow-[0px_-8px_0px_0px_rgba(248,249,250,1)] max-h-96'
-  )}
->
+    <div
+      className={cn(
+        'flex flex-col gap-4 p-6 rounded-2xl border bg-white w-full max-w-sm',
+        isPopular
+          ? 'relative shadow-[0px_-8px_0px_0px_#FF4F00] pt-20'
+          : 'shadow-[0px_-8px_0px_0px_rgba(248,249,250,1)] max-h-96'
+      )}>
       {isPopular && (
         <span
           className='absolute w-32 flex items-center justify-center text-sm font-semibold px-[1px] rounded-md py-[2px] top-8 left-4 right-0 bg-[#FFF6EF] text-lp15-primary uppercase'
