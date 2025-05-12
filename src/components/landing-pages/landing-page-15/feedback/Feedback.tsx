@@ -42,7 +42,10 @@ const Feedback = () => {
         </div>
 
         <div className='w-full'>
-          <Slider ref={sliderRef} {...settings} className='lp-11-slider space-y-4 flex justify-center items-center'>
+          <Slider
+            ref={sliderRef}
+            {...settings}
+            className='lp-11-slider space-y-4 flex justify-center items-center'>
             {feedbacks.map(({ content, author, role }, index) => (
               <div key={index} className='bg-[#281B16] rounded-3xl p-8 space-y-14 max-w-[500px]'>
                 <p className='text-white/60 text-sm md:text-base md:leading-7 font-light'>{content}</p>
